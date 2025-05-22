@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexoraMC - Premium Minecraft Server</title>
+    <meta name="description" content="Join NexoraMC - The ultimate premium Minecraft server with custom features, amazing community, and endless adventures.">
+    <meta name="keywords" content="Minecraft, server, gaming, multiplayer, survival, creative, PvP">
+    <meta property="og:title" content="NexoraMC - Premium Minecraft Server">
+    <meta property="og:description" content="Join the ultimate Minecraft server with custom features and amazing community.">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>⭐</text></svg>">
 </head>
 <body>
     <!-- Loading Screen -->
@@ -31,23 +37,25 @@
         <!-- Background Elements -->
         <div class="bg-stars"></div>
         <div class="bg-gradient"></div>
-        
+
         <!-- Navigation -->
-        <nav class="navbar">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
                 <div class="nav-logo">
                     <div class="star-logo">
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
                     </div>
                     <span>NexoraMC</span>
                 </div>
                 <div class="nav-menu" id="navMenu">
                     <a href="#home" class="nav-link active">Home</a>
                     <a href="#features" class="nav-link">Features</a>
+                    <a href="#gamemodes" class="nav-link">Game Modes</a>
                     <a href="#connect" class="nav-link">Connect</a>
+                    <a href="#store" class="nav-link">Store</a>
                     <a href="#community" class="nav-link">Community</a>
                 </div>
-                <div class="nav-toggle" id="navToggle">
+                <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -60,7 +68,7 @@
             <div class="hero-content">
                 <div class="hero-logo">
                     <div class="star-logo large">
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
                     </div>
                 </div>
                 <h1 class="hero-title">
@@ -68,26 +76,39 @@
                     <span class="title-sub">Premium Minecraft Experience</span>
                 </h1>
                 <p class="hero-description">
-                    Join the ultimate Minecraft server with custom features, amazing community, and endless adventures waiting for you.
+                    Join the ultimate Minecraft server with custom features, amazing community, and endless adventures waiting for you. Experience next-level gameplay with our unique plugins and dedicated staff team.
                 </p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="copyIP()">
-                        <i class="fas fa-server"></i>
+                    <button class="btn btn-primary" onclick="copyIP()" aria-label="Copy server IP address">
+                        <i class="fas fa-server" aria-hidden="true"></i>
                         Copy Server IP
                     </button>
-                    <a href="#" class="btn btn-secondary" target="_blank">
-                        <i class="fab fa-discord"></i>
+                    <a href="https://discord.gg/nexoramc" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-discord" aria-hidden="true"></i>
                         Join Discord
                     </a>
                 </div>
-                <div class="server-info">
-                    <div class="info-item">
-                        <i class="fas fa-users"></i>
-                        <span>250+ Players Online</span>
+                <div class="server-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-users" aria-hidden="true"></i>
+                        <div class="stat-info">
+                            <span class="stat-number" id="playerCount">247</span>
+                            <span class="stat-label">Players Online</span>
+                        </div>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-clock"></i>
-                        <span>24/7 Uptime</span>
+                    <div class="stat-item">
+                        <i class="fas fa-clock" aria-hidden="true"></i>
+                        <div class="stat-info">
+                            <span class="stat-number">99.9%</span>
+                            <span class="stat-label">Uptime</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-gamepad" aria-hidden="true"></i>
+                        <div class="stat-info">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Support</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -96,6 +117,7 @@
                     <div class="floating-cube"></div>
                     <div class="floating-cube"></div>
                     <div class="floating-cube"></div>
+                    <div class="floating-diamond"></div>
                 </div>
             </div>
         </section>
@@ -104,34 +126,153 @@
         <section id="features" class="features">
             <div class="container">
                 <h2 class="section-title">Why Choose NexoraMC?</h2>
+                <p class="section-subtitle">Experience Minecraft like never before with our premium features</p>
                 <div class="features-grid">
-                    <div class="feature-card">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="feature-icon">
                             <i class="fas fa-bolt"></i>
                         </div>
                         <h3>Lightning Fast</h3>
-                        <p>Optimized servers with minimal lag and maximum performance for the best gaming experience.</p>
+                        <p>Optimized servers with minimal lag and maximum performance for the best gaming experience possible.</p>
+                        <div class="feature-stats">
+                            <span class="stat-highlight">< 20ms</span> response time
+                        </div>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="feature-icon">
                             <i class="fas fa-shield-alt"></i>
                         </div>
                         <h3>Anti-Grief Protection</h3>
-                        <p>Advanced protection systems to keep your builds safe and secure from griefers.</p>
+                        <p>Advanced protection systems to keep your builds safe and secure from griefers and malicious players.</p>
+                        <div class="feature-stats">
+                            <span class="stat-highlight">100%</span> protected
+                        </div>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="feature-icon">
                             <i class="fas fa-puzzle-piece"></i>
                         </div>
                         <h3>Custom Plugins</h3>
-                        <p>Unique custom plugins and features you won't find anywhere else.</p>
+                        <p>Unique custom plugins and features you won't find anywhere else, designed by our expert development team.</p>
+                        <div class="feature-stats">
+                            <span class="stat-highlight">50+</span> custom features
+                        </div>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
                         <div class="feature-icon">
                             <i class="fas fa-headset"></i>
                         </div>
                         <h3>24/7 Support</h3>
-                        <p>Dedicated staff team available around the clock to help with any issues.</p>
+                        <p>Dedicated staff team available around the clock to help with any issues or questions you might have.</p>
+                        <div class="feature-stats">
+                            <span class="stat-highlight">Always</span> available
+                        </div>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="feature-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h3>Economy System</h3>
+                        <p>Balanced economy with jobs, shops, and trading systems to enhance your gameplay experience.</p>
+                        <div class="feature-stats">
+                            <span class="stat-highlight">Dynamic</span> pricing
+                        </div>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="feature-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Competitions & Events</h3>
+                        <p>Regular events, competitions, and tournaments with amazing prizes and rewards for participants.</p>
+                        <div class="feature-stats">
+                            <span class="stat-highlight">Weekly</span> events
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Modes Section -->
+        <section id="gamemodes" class="gamemodes">
+            <div class="container">
+                <h2 class="section-title">Game Modes</h2>
+                <p class="section-subtitle">Choose your adventure from our diverse game modes</p>
+                <div class="gamemodes-grid">
+                    <div class="gamemode-card">
+                        <div class="gamemode-image">
+                            <div class="gamemode-icon">
+                                <i class="fas fa-mountain"></i>
+                            </div>
+                        </div>
+                        <div class="gamemode-content">
+                            <h3>Survival</h3>
+                            <p>Classic survival experience with custom enhancements, claims, and community features.</p>
+                            <div class="gamemode-features">
+                                <span class="feature-tag">Land Claims</span>
+                                <span class="feature-tag">Economy</span>
+                                <span class="feature-tag">Jobs</span>
+                            </div>
+                            <div class="gamemode-stats">
+                                <span class="players-online">156 online</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gamemode-card">
+                        <div class="gamemode-image">
+                            <div class="gamemode-icon">
+                                <i class="fas fa-hammer"></i>
+                            </div>
+                        </div>
+                        <div class="gamemode-content">
+                            <h3>Creative</h3>
+                            <p>Unlimited creativity with WorldEdit, custom plots, and building competitions.</p>
+                            <div class="gamemode-features">
+                                <span class="feature-tag">WorldEdit</span>
+                                <span class="feature-tag">Plots</span>
+                                <span class="feature-tag">Contests</span>
+                            </div>
+                            <div class="gamemode-stats">
+                                <span class="players-online">43 online</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gamemode-card">
+                        <div class="gamemode-image">
+                            <div class="gamemode-icon">
+                                <i class="fas fa-sword"></i>
+                            </div>
+                        </div>
+                        <div class="gamemode-content">
+                            <h3>PvP Arena</h3>
+                            <p>Competitive PvP battles with custom kits, rankings, and tournament systems.</p>
+                            <div class="gamemode-features">
+                                <span class="feature-tag">Rankings</span>
+                                <span class="feature-tag">Tournaments</span>
+                                <span class="feature-tag">Custom Kits</span>
+                            </div>
+                            <div class="gamemode-stats">
+                                <span class="players-online">89 online</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gamemode-card">
+                        <div class="gamemode-image">
+                            <div class="gamemode-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                        </div>
+                        <div class="gamemode-content">
+                            <h3>Minigames</h3>
+                            <p>Fun minigames including SkyWars, BedWars, and custom party games.</p>
+                            <div class="gamemode-features">
+                                <span class="feature-tag">SkyWars</span>
+                                <span class="feature-tag">BedWars</span>
+                                <span class="feature-tag">Party Games</span>
+                            </div>
+                            <div class="gamemode-stats">
+                                <span class="players-online">127 online</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -141,6 +282,7 @@
         <section id="connect" class="connect">
             <div class="container">
                 <h2 class="section-title">Ready to Join?</h2>
+                <p class="section-subtitle">Connect now and start your adventure</p>
                 <div class="connect-grid">
                     <div class="connect-card">
                         <div class="connect-icon">
@@ -149,22 +291,220 @@
                         <h3>Server IP</h3>
                         <div class="ip-display" id="serverIP">
                             <span>play.nexoramc.net</span>
-                            <button class="copy-btn" onclick="copyIP()">
+                            <button class="copy-btn" onclick="copyIP()" aria-label="Copy server IP">
                                 <i class="fas fa-copy"></i>
                             </button>
                         </div>
-                        <p>Java Edition 1.20+</p>
+                        <div class="server-details">
+                            <p><strong>Version:</strong> Java Edition 1.20+</p>
+                            <p><strong>Port:</strong> Default (25565)</p>
+                            <p><strong>Location:</strong> North America</p>
+                        </div>
+                        <div class="connection-steps">
+                            <h4>How to Connect:</h4>
+                            <ol>
+                                <li>Open Minecraft Java Edition</li>
+                                <li>Click "Multiplayer"</li>
+                                <li>Click "Add Server"</li>
+                                <li>Paste the server IP</li>
+                                <li>Click "Done" and connect!</li>
+                            </ol>
+                        </div>
                     </div>
                     <div class="connect-card">
                         <div class="connect-icon">
                             <i class="fab fa-discord"></i>
                         </div>
-                        <h3>Discord Server</h3>
-                        <a href="#" class="discord-btn" target="_blank">
+                        <h3>Discord Community</h3>
+                        <a href="https://discord.gg/nexoramc" class="discord-btn" target="_blank" rel="noopener noreferrer">
                             <span>Join Our Community</span>
                             <i class="fas fa-external-link-alt"></i>
                         </a>
-                        <p>Chat, events, and support</p>
+                        <div class="discord-features">
+                            <div class="discord-feature">
+                                <i class="fas fa-comments"></i>
+                                <span>Community Chat</span>
+                            </div>
+                            <div class="discord-feature">
+                                <i class="fas fa-calendar"></i>
+                                <span>Event Announcements</span>
+                            </div>
+                            <div class="discord-feature">
+                                <i class="fas fa-life-ring"></i>
+                                <span>24/7 Support</span>
+                            </div>
+                            <div class="discord-feature">
+                                <i class="fas fa-gift"></i>
+                                <span>Exclusive Perks</span>
+                            </div>
+                        </div>
+                        <p class="discord-stats">
+                            <strong>2,500+</strong> members online
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Store Section -->
+        <section id="store" class="store">
+            <div class="container">
+                <h2 class="section-title">Store</h2>
+                <p class="section-subtitle">Support the server and get amazing perks</p>
+                <div class="store-grid">
+                    <div class="rank-card">
+                        <div class="rank-header">
+                            <div class="rank-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3 class="rank-name">VIP</h3>
+                            <div class="rank-price">$9.99</div>
+                        </div>
+                        <div class="rank-features">
+                            <div class="rank-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Colored Chat</span>
+                            </div>
+                            <div class="rank-feature">
+                                <i class="fas fa-check"></i>
+                                <span>5 Extra Homes</span>
+                            </div>
+                            <div class="rank-feature">
+                                <i class="fas fa-check"></i>
+                                <span>VIP-only Areas</span>
+                            </div>
+                            <div class="rank-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Priority Support</span>
+                            </div>
+                        </div>
+                        <a href="https://store.nexoramc.net/vip" class="rank-btn" target="_blank" rel="noopener noreferrer">
+                            Purchase VIP
+                        </a>
+                    </div>
+                    <div class="rank-card premium">
+                        <div class="rank-badge">Most Popular</div>
+                        <div class="rank-header">
+                            <div class="rank-icon">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <h3 class="rank-name">Premium</h3>
+                            <div class="rank-price">$19.99</div>
+                        </div>
+                        <div class="rank-features">
+                            <div class="rank-feature">
+                                <i class="fas fa-check"></i>
+                                <span>All VIP Features</span>
+                            </div>
+                            <div class="rank-feature">
+                                <i class="fas fa-check"></i>
+                                <span>15 Extra Homes</span>
+                            </div>
+                            <div class="rank-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Fly in Spawn</span>
+                            </div>
+                            <div class="rank-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Premium Kit</span>
+                            </div>
+                            <div class="rank-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Custom Prefix</span>
+                            </div>
+                        </div>
+                        <a href="https://store.nexoramc.net/premium" class="rank-btn" target="_blank" rel="noopener noreferrer">
+                            Purchase Premium
+                        </a>
+                    </div>
+                    <div class="rank-card">
+                        <div class="rank-header">
+                            <div class="rank-icon">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <h3 class="rank-name">Elite</h3>
+                            <div class="rank-price">$39.99</div>
+                        </div>
+                        <div class="rank-features">
+                            <div class="rank-feature">
+                                <i class="fas fa-check"></i>
+                                <span>All Premium Features</span>
+                            </div>
+                            <div class="rank-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Unlimited Homes</span>
+                            </div>
+                            <div class="rank-feature">
+                                <i class="fas fa-check"></i>
+                                <span>WorldEdit Access</span>
+                            </div>
+                            <div class="rank-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Elite Kit</span>
+                            </div>
+                            <div class="rank-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Exclusive Cosmetics</span>
+                            </div>
+                        </div>
+                        <a href="https://store.nexoramc.net/elite" class="rank-btn" target="_blank" rel="noopener noreferrer">
+                            Purchase Elite
+                        </a>
+                    </div>
+                </div>
+                <div class="store-info">
+                    <div class="info-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Secure Payments</h4>
+                        <p>All transactions are processed securely through PayPal and Stripe</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-undo"></i>
+                        <h4>30-Day Guarantee</h4>
+                        <p>Not satisfied? Get a full refund within 30 days of purchase</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-infinity"></i>
+                        <h4>Lifetime Access</h4>
+                        <p>Your rank and perks are permanent - no monthly subscriptions</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section id="community" class="community">
+            <div class="container">
+                <h2 class="section-title">Join Our Community</h2>
+                <p class="section-subtitle">Connect with thousands of players worldwide</p>
+                <div class="community-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-number">15,000+</div>
+                        <div class="stat-label">Registered Players</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <div class="stat-number">2,500+</div>
+                        <div class="stat-label">Discord Members</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Years Online</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-number">4.9/5</div>
+                        <div class="stat-label">Player Rating</div>
                     </div>
                 </div>
             </div>
@@ -174,13 +514,62 @@
         <footer class="footer">
             <div class="container">
                 <div class="footer-content">
-                    <div class="footer-logo">
-                        <div class="star-logo">
-                            <i class="fas fa-star"></i>
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <div class="star-logo">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>NexoraMC</span>
                         </div>
-                        <span>NexoraMC</span>
+                        <p class="footer-description">
+                            The ultimate premium Minecraft server experience with custom features, amazing community, and endless adventures.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://discord.gg/nexoramc" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                            <a href="https://twitter.com/nexoramc" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://youtube.com/nexoramc" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
                     </div>
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#gamemodes">Game Modes</a></li>
+                            <li><a href="#connect">Connect</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Store</h4>
+                        <ul class="footer-links">
+                            <li><a href="https://store.nexoramc.net/vip" target="_blank" rel="noopener noreferrer">VIP Rank</a></li>
+                            <li><a href="https://store.nexoramc.net/premium" target="_blank" rel="noopener noreferrer">Premium Rank</a></li>
+                            <li><a href="https://store.nexoramc.net/elite" target="_blank" rel="noopener noreferrer">Elite Rank</a></li>
+                            <li><a href="https://store.nexoramc.net" target="_blank" rel="noopener noreferrer">View All</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <ul class="footer-links">
+                            <li><a href="https://discord.gg/nexoramc" target="_blank" rel="noopener noreferrer">Discord Support</a></li>
+                            <li><a href="mailto:support@nexoramc.net">Email Support</a></li>
+                            <li><a href="/rules" target="_blank" rel="noopener noreferrer">Server Rules</a></li>
+                            <li><a href="/faq" target="_blank" rel="noopener noreferrer">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
                     <p>&copy; 2024 NexoraMC. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                        <a href="/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+                    </div>
                 </div>
             </div>
         </footer>
@@ -191,6 +580,11 @@
         <i class="fas fa-check"></i>
         Server IP copied to clipboard!
     </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
