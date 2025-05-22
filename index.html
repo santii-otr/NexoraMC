@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexoraMC - Premium Minecraft Server</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="logo-container">
+                <div class="star-logo">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h1 class="loading-title">NexoraMC</h1>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-text">Initializing server...</p>
+        </div>
+        <div class="loading-particles"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent" class="main-content hidden">
+        <!-- Background Elements -->
+        <div class="bg-stars"></div>
+        <div class="bg-gradient"></div>
+        
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <div class="star-logo">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span>NexoraMC</span>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#connect" class="nav-link">Connect</a>
+                    <a href="#community" class="nav-link">Community</a>
+                </div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <div class="star-logo large">
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-main">NexoraMC</span>
+                    <span class="title-sub">Premium Minecraft Experience</span>
+                </h1>
+                <p class="hero-description">
+                    Join the ultimate Minecraft server with custom features, amazing community, and endless adventures waiting for you.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="copyIP()">
+                        <i class="fas fa-server"></i>
+                        Copy Server IP
+                    </button>
+                    <a href="#" class="btn btn-secondary" target="_blank">
+                        <i class="fab fa-discord"></i>
+                        Join Discord
+                    </a>
+                </div>
+                <div class="server-info">
+                    <div class="info-item">
+                        <i class="fas fa-users"></i>
+                        <span>250+ Players Online</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>24/7 Uptime</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-elements">
+                    <div class="floating-cube"></div>
+                    <div class="floating-cube"></div>
+                    <div class="floating-cube"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose NexoraMC?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Lightning Fast</h3>
+                        <p>Optimized servers with minimal lag and maximum performance for the best gaming experience.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Anti-Grief Protection</h3>
+                        <p>Advanced protection systems to keep your builds safe and secure from griefers.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <h3>Custom Plugins</h3>
+                        <p>Unique custom plugins and features you won't find anywhere else.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>24/7 Support</h3>
+                        <p>Dedicated staff team available around the clock to help with any issues.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Connect Section -->
+        <section id="connect" class="connect">
+            <div class="container">
+                <h2 class="section-title">Ready to Join?</h2>
+                <div class="connect-grid">
+                    <div class="connect-card">
+                        <div class="connect-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Server IP</h3>
+                        <div class="ip-display" id="serverIP">
+                            <span>play.nexoramc.net</span>
+                            <button class="copy-btn" onclick="copyIP()">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <p>Java Edition 1.20+</p>
+                    </div>
+                    <div class="connect-card">
+                        <div class="connect-icon">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <h3>Discord Server</h3>
+                        <a href="#" class="discord-btn" target="_blank">
+                            <span>Join Our Community</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <p>Chat, events, and support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <div class="star-logo">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span>NexoraMC</span>
+                    </div>
+                    <p>&copy; 2024 NexoraMC. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Copy Notification -->
+    <div id="copyNotification" class="copy-notification">
+        <i class="fas fa-check"></i>
+        Server IP copied to clipboard!
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
